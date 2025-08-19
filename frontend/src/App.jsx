@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import FormPage from './pages/FormPage';
+import PortfolioPage from './pages/PortfolioPage';
 
-const App = () => {
+function App() {
   return (
-    <div className='bg-amber-200 font-bold align-middle flex justify-center'>jai sri ram</div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<FormPage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
